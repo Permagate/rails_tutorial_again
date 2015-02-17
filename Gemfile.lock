@@ -194,6 +194,7 @@ PLATFORMS
 
 DEPENDENCIES
   coffee-rails (= 4.1.0)
+  guard (= 2.12.1)
   guard-minitest (= 2.3.1)
   jbuilder (= 2.2.3)
   jquery-rails (= 4.0.3)
