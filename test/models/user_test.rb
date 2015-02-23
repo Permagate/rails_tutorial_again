@@ -60,4 +60,9 @@ class UserTest < ActiveSupport::TestCase
     @user.email.upcase!
     assert_not @user.valid?
   end
+
+  test "should be invalid if its password has less than 6 chars" do
+    @user.password = @user.password_confirmation = "a" * 5;
+    assert_not @user.valid?
+  end
 end
