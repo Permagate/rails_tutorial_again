@@ -5,10 +5,6 @@ class SiteLayoutTest < ActionDispatch::IntegrationTest
   #   assert true
   # end
 
-  def setup
-    @common_title = "Ruby on Rails Tutorial Sample App"
-  end
-
   test "home links" do
     get root_path
     assert_template 'static_pages/home'
@@ -21,7 +17,7 @@ class SiteLayoutTest < ActionDispatch::IntegrationTest
   test "signup title" do
     get signup_path
     assert_template "users/new"
-    assert_select "title", "Sign up | #{@common_title}"
+    assert_select "title", full_title("Sign up")
   end
   
 end
