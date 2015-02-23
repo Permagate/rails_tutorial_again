@@ -18,6 +18,7 @@ class UsersSignupTest < ActionDispatch::IntegrationTest
     end
     assert_template 'users/show'
     assert flash[:success]
+    assert_select 'div.alert-success'
   end
 
   test "should show 1 error when name is empty" do
