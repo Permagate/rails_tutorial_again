@@ -11,6 +11,7 @@ gem 'sdoc',                 '0.4.0', group: :doc
 
 group :development, :test do
   gem 'sqlite3'
+  gem 'byebug',             '3.5.1'
 end
 
 group :test do
