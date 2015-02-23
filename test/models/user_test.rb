@@ -61,6 +61,12 @@ class UserTest < ActiveSupport::TestCase
     assert_not @user.valid?
   end
 
+  test "should be valid if its email is stored in lower-case chars" do
+    @user.email = "HaHaHa@gmail.com"
+    @user.save
+    assert_equal @user.reload.email, "hahaha@gmail.com"
+  end
+
   test "should be invalid if its password has less than 6 chars" do
     @user.password = @user.password_confirmation = "a" * 5;
     assert_not @user.valid?
