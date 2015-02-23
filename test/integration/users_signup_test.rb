@@ -17,6 +17,7 @@ class UsersSignupTest < ActionDispatch::IntegrationTest
       post_via_redirect users_path, user: @valid_user
     end
     assert_template 'users/show'
+    assert flash[:success]
   end
 
   test "should show 1 error when name is empty" do
