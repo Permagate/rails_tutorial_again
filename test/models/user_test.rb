@@ -5,8 +5,8 @@ class UserTest < ActiveSupport::TestCase
   #   assert true
   # end
   def setup
-    @saved_user = User.create(name: "Example Saved User", email: "saveduser@example.com")
-    @user = User.new(name: "Example User", email: "user@example.com")
+    @saved_user = User.create(name: "Example Saved User", email: "saveduser@example.com", password: "foobar", password_confirmation: "foobar")
+    @user = User.new(name: "Example User", email: "user@example.com", password: "foobar", password_confirmation: "foobar")
   end
 
   test "should be valid" do
