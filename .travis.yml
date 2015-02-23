@@ -3,3 +3,8 @@ rvm:
   - 2.1.0
 gemfile:
   - gemfiles/Gemfile.travis
+env:
+  - DB=sqlite
+script:
+  - bundle exec rake db:test:prepare
+  - bundle exec rake
