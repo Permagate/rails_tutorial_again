@@ -5,15 +5,21 @@ johnnyawesome:
   email: johnnyawesome.tc@gmail.com
   password_digest: <%= User.digest "foobar" %>
   admin: true
+  activated: true
+  activated_at: <%= Time.zone.now %>
 
 sissysilly:
   name: Sissy Silly
   email: sissysilly.tc@gmail.com
   password_digest: <%= User.digest "foobar" %>
+  activated: true
+  activated_at: <%= Time.zone.now %>
 
 <% 30.times do |n| %>
 user_<%= n %>:
   name:  <%= "User #{n}" %>
   email: <%= "user-#{n}@example.com" %>
   password_digest: <%= User.digest('foobar') %>
+  activated: true
+  activated_at: <%= Time.zone.now %>
 <% end %>
