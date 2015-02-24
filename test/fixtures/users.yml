@@ -4,6 +4,7 @@ johnnyawesome:
   name: Johnny Awesome
   email: johnnyawesome.tc@gmail.com
   password_digest: <%= User.digest "foobar" %>
+  admin: true
 
 sissysilly:
   name: Sissy Silly
