@@ -12,6 +12,7 @@ gem 'sdoc',                 '0.4.0', group: :doc
 group :development, :test do
   gem 'sqlite3'
   gem 'byebug',             '3.5.1'
+  gem 'faker',              '1.4.3'
 end
 
 group :test do
@@ -31,3 +32,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin]
 
 gem 'bootstrap-sass',       '3.3.3'
 gem 'bcrypt',               '3.1.10'
+gem 'will_paginate',           '3.0.7'
+gem 'bootstrap-will_paginate', '0.0.10'
