@@ -6,7 +6,7 @@ class UsersSignupTest < ActionDispatch::IntegrationTest
   # end
   def setup
     @valid_user = { name: "Johnny Awesome",
-                    email: "johnnyawesome.tc@gmail.com",
+                    email: "johnnyawesome.tc@inbox.com",
                     password: "foobar",
                     password_confirmation: "foobar" }
   end
@@ -19,6 +19,7 @@ class UsersSignupTest < ActionDispatch::IntegrationTest
     assert_template 'users/show'
     assert flash[:success]
     assert_select 'div.alert-success'
+    assert is_logged_in?
   end
 
   test "should show 1 error when name is empty" do
