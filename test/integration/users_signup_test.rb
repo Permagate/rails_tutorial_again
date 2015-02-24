@@ -72,7 +72,7 @@ class UsersSignupTest < ActionDispatch::IntegrationTest
     assert_select 'div#error_explanation ul li', 1
   end
 
-  test "should show 2 errors when password is empty" do
+  test "should show 1 error when password is empty" do
     @valid_user[:password] = ""
     @valid_user[:password_confirmation] = ""
     get signup_path
@@ -80,7 +80,7 @@ class UsersSignupTest < ActionDispatch::IntegrationTest
       post users_path, user: @valid_user
     end
     assert_template 'users/new'
-    assert_select 'div#error_explanation ul li', 2
+    assert_select 'div#error_explanation ul li', 1
   end
 
   test "should show 1 error when password has less than 6 chars" do
