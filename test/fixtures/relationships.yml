@@ -1,0 +1,15 @@
+one:
+  follower: johnnyawesome
+  followed: sissysilly
+
+two:
+  follower: johnnyawesome
+  followed: vickydilly
+
+three:
+  follower: sissysilly
+  followed: johnnyawesome
+
+four:
+  follower: zeus
+  followed: johnnyawesome
